@@ -42,9 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(centerTitle: true,
+        appBar: AppBar(centerTitle: true,leading: IconButton(onPressed: () { ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Make a good list and chase your dreams!!'),backgroundColor: Colors.teal
+          ),
+        );
+        }, icon: Icon(Icons.menu)),
           automaticallyImplyLeading: false,
 
           title: Text("Atomic Habits"),
@@ -114,15 +120,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         color: Colors.grey[250],
                         child: ListTile(
-                          title: Text(data!.title,
-                            style: TextStyle(fontSize: 22, color: Colors.black),),
+                          title: Center(
+                            child: Text(data!.title,
+                              style: TextStyle(fontSize: 22, color: Colors.brown),),
+                          ),
                           subtitle: Text(data.description, style: TextStyle(
-                              fontSize: 20, color: Colors.black38)),
+                              fontSize: 20, color: Colors.black,fontStyle: FontStyle.italic)),
                           leading: Text("$key",
                             style: TextStyle(fontSize: 18, color: Colors.black),),
-                          trailing: Icon(Icons.check, color: data.complete
-                              ? Colors.deepPurpleAccent
-                              : Colors.red,),
+                          trailing: Icon(Icons.check_circle_outline,size: 40, color: data.complete
+                              ? Colors.green
+                              : Colors.blueAccent,),
                           onTap: () {
                             showDialog(
                                 context: context,
@@ -167,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                           .description,
                                                       complete: true
                                                   );
-                                                  dataBox.delete(key);
+                                                  dataBox.delete(mData);
                                                   Navigator.pop(context);
                                                 },
                                                 child: Text("Remove",
@@ -192,7 +200,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
 
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton(elevation: 10,
           onPressed: () {
             showDialog(
                 context: context,
@@ -220,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
                            ),
                            TextButton(style:ElevatedButton.styleFrom(elevation: 5,
                                backgroundColor: Colors
-                                   .lightGreen,
+                                   .teal,
                                shape: RoundedRectangleBorder(
                                    borderRadius: BorderRadiusDirectional
                                        .circular(30))),
