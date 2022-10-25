@@ -169,13 +169,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                                         borderRadius: BorderRadiusDirectional
                                                             .circular(10))),
                                                 onPressed: () {
-                                                  DataModel mData = DataModel(
+                                                   DataModel(
                                                       title: data.title,
                                                       description: data
                                                           .description,
                                                       complete: true
                                                   );
-                                                  dataBox.delete(mData);
+                                                  dataBox.delete(key);
                                                   Navigator.pop(context);
                                                 },
                                                 child: Text("Remove",
