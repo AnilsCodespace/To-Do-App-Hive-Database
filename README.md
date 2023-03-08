@@ -1,4 +1,6 @@
-# hive_todo_assignment
+# To Do App Hive Database
+
+A simple To Do app using Hive Database to track your multiple todo's
 ![f029af32-ec66-4b93-84d4-a2cf9300f8f2](https://user-images.githubusercontent.com/87460435/200131377-3a840290-5e2d-4795-a81c-16000a5ffa6f.jpg)
 ![33b3daac-8312-4ec0-9a6f-5d8d775fd586](https://user-images.githubusercontent.com/87460435/200131386-152c670c-95d7-4ece-9515-30c0a075f352.jpg)
 ![9691e01d-ab02-451d-a660-124a82d6d214](https://user-images.githubusercontent.com/87460435/200131390-68b6739d-81ab-420c-b540-ce22913ff7ff.jpg)
